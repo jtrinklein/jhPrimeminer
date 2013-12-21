@@ -16,7 +16,7 @@ then
 fi
 
 screen -A -d -m -S miner ~/jhPrimeminer/jhprimeminer -o http://ypool.net:10034/ -u theotherjim.$1 -p $1
-status=(screen -ls | grep 'miner')
+status=$(screen -ls | grep 'miner')
 if [ -z "$status" ]
 then
     echo there was a problem starting the screen session
